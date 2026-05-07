@@ -1,5 +1,5 @@
-import { usePage } from "./layout/PageContext";
 
+import Layout from "./layout/Layout"
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivitiesPage from "./activities/ActivitiesPage";
@@ -25,7 +25,7 @@ export default function App() {
 
 {/* show the register component when URL is register */}
         <Route path="register" element={<Register />} />
-        
+
 {/* show the login component when URL is login */}
         <Route path="login" element={<Login />} />
       </Route>
