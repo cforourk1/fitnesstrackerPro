@@ -7,7 +7,7 @@ import RoutineForm from "./RoutineForm";
 
 export default function RoutinesPage() {
   const [routines, setRoutines] = useState([]);
- const { token } = useAuth;
+ const { token } = useAuth();
   const syncRoutines
    = async () => {
     const data = await getRoutines
