@@ -9,12 +9,14 @@ export default function Navbar() {
       <p>Fitness Trackr</p>
       <nav>
         <Link to="/">Activities</Link>
+        <Link to="routines">Routines</Link>
         {token ? (
           <a onClick={() => logout()}>Log out</a>
         ) : (
           <>
             <Link to="register">Register</Link>
             <Link to="login">Login</Link>
+            <Link to="routines">Routines</Link>
           </>
         )}
       </nav>

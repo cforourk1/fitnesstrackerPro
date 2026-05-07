@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
-import { getRoutine } from "../api/activities";
-import { deleteRoutine } from "../api/activities";
+import { deleteRoutine, getRoutines } from "../api/routines";
 import { useAuth } from "../auth/AuthContext";
 /** useParams is a hook that looks at the current url and hands back the dynamic parts., this is how *we will be able to identify which Routine we are on. That will display in the URL. And that is how *we will be able to navigate to a specific Routine rather than the entire list of activities.
  * */
@@ -17,10 +16,9 @@ export default function RoutinePage() {
 const [error, setError] = useState(null);
 //render sync Routine and get the data from the api
 const syncRoutine = async () => {
-//navigate bacj to Routine
-const data = await getRoutine(id);
-//set the current Routine to data from API
-setRoutine(data);
+const data = await getRoutines();
+const found = data.find((r) => r.id === Number(id));
+setRoutine(found);
 };
 useEffect(() => {
     syncRoutine();
@@ -40,7 +38,7 @@ const tryDelete = async () => {
     {Routine && (
     <div>
     <h1>{Routine.name}</h1>
-    <p>{Routine.description}</p>
+    <p>{Routine.goal}</p>
     <p>{Routine.creatorName}</p>
     {token && <button onClick={tryDelete}>Delete</button>}
       {error && <p role="alert">{error}</p>}
