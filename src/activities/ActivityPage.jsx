@@ -21,7 +21,7 @@ useEffect(() => {
     <div>
     <h1>{activity.name}</h1>
     <p>{activity.description}</p>
-    <p>{activity.creator.name}</p>
+    <p>{activity.creatorName}</p>
     </div>
   )}
   </>
