@@ -8,7 +8,7 @@ export default function Navbar() {
     <header>
       <p>Fitness Trackr</p>
       <nav>
-        <Link to="/activities">Activities</Link>
+        <Link to="/">Activities</Link>
         {token ? (
           <a onClick={() => logout()}>Log out</a>
         ) : (

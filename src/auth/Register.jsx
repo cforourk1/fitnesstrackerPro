@@ -18,7 +18,7 @@ export default function Register() {
     const password = formData.get("password");
     try {
       await register({ username, password });
-      navigate("/activities");
+      navigate("/");
     } catch (e) {
       setError(e.message);
     }

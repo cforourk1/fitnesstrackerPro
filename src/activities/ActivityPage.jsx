@@ -30,7 +30,7 @@ const tryDelete = async () => {
 //see if activity can be deleted. does token for activity match current user logged in
     try {
       await deleteActivity(token, activity.id);
-      navigate("/activities");
+      navigate("/");
     } catch (e) {
       setError(e.message);
     }
