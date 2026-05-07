@@ -11,15 +11,22 @@ import Error404 from "./Error404.jsx";
  * account will be able to upload and manage their own activities.
  */
 
-//import routes
-
+/*import routes*/
 import { Routes, Route } from "react-router"
 export default function App() {
   return(
     <Routes>
+      {/*import routes the parent route any URL using / will use layout as A wrapper  - it will wrap all other pages with the navbar and main content area*/}
       <Route path="/" element={<Layout />}>
+
+{/* route index element - this is the default page when you are just at / it will show activities page*/}
+
         <Route index element={<ActivitiesPage />} />
+
+{/* show the register component when URL is register */}
         <Route path="register" element={<Register />} />
+        
+{/* show the login component when URL is login */}
         <Route path="login" element={<Login />} />
       </Route>
     </Routes>
