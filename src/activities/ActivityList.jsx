@@ -32,7 +32,7 @@ function ActivityListItem({ activity, syncActivities }) {
       setError(e.message);
     }
   };
-//added link to for the activity ID 
+//added link to for the activity ID
   return (
     <li>
       <Link to={`/activities/${activity.id}`}>{activity.name}</Link>

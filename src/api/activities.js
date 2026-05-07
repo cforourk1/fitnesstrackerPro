@@ -14,7 +14,7 @@ export async function getActivities() {
 /** Fetches a single activity from the array of activities based on IT . */
 export async function getActivity(id) {
   try {
-    const response = await fetch(API + "/activity/" + id);
+    const response = await fetch(API + "/activities/" + id);
     const result = await response.json();
     return result;
   } catch (e) {
