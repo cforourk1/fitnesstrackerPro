@@ -3,6 +3,7 @@ import Layout from "./layout/Layout"
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivitiesPage from "./activities/ActivitiesPage";
+import ActivityPage from "./activities/ActivityPage";
 import Error404 from "./Error404.jsx";
 
 /**
@@ -28,6 +29,9 @@ export default function App() {
 
 {/* show the login component when URL is login */}
         <Route path="login" element={<Login />} />
+
+{/* show the activty page */}
+        <Route path="activities/:id" element={<ActivityPage />} />
       </Route>
     </Routes>
   )
