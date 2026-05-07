@@ -4,6 +4,8 @@ import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivitiesPage from "./activities/ActivitiesPage";
 import ActivityPage from "./activities/ActivityPage";
+import RoutinePage from "./routines/RoutinePage";
+import RoutinesPage from "./routines/RoutinesPage";
 import Error404 from "./Error404.jsx";
 
 /**
@@ -32,6 +34,10 @@ export default function App() {
 
 {/* show the activty page */}
         <Route path="activities/:id" element={<ActivityPage />} />
+{/* show the routine page */}
+        <Route path="routines/:id" element={<RoutinePage />} />
+{/* show the routine page */}
+        <Route path="routines" element={<RoutinesPage />} />
       </Route>
     </Routes>
   )
