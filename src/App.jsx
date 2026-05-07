@@ -10,12 +10,18 @@ import Error404 from "./Error404.jsx";
  * discover new routines. Anyone can browse the site and make an account, and users with an
  * account will be able to upload and manage their own activities.
  */
+
+//import routes
+
+import { Routes, Route } from "react-router"
 export default function App() {
-  const { page } = usePage();
-
-  if (page === "register") return <Register />;
-  if (page === "login") return <Login />;
-  if (page === "activities") return <ActivitiesPage />;
-
-  return <Error404 />;
+  return(
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<ActivitiesPage />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+      </Route>
+    </Routes>
+  )
 }
