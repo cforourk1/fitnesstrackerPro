@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { deleteActivity } from "../api/activities";
 import { useAuth } from "../auth/AuthContext";
+import { Link } from "react-router";
 
 export default function ActivityList({ activities, syncActivities }) {
   return (
@@ -31,10 +32,10 @@ function ActivityListItem({ activity, syncActivities }) {
       setError(e.message);
     }
   };
-
+//added link to for the activity ID 
   return (
     <li>
-      <p>{activity.name}</p>
+      <Link to={`/activities/${activity.id}`}>{activity.name}</Link>
       {token && <button onClick={tryDelete}>Delete</button>}
       {error && <p role="alert">{error}</p>}
     </li>
