@@ -17,8 +17,37 @@ body {
     right: 1rem;
 }
 
+/*styling for the gritty pics */
 .grittyPic {
 width: 900px;
 
 
+}
+
+/* container for action buttons and logo areas */
+.pageWrapper {
+  display: flex;
+  height: 100vh;
+}
+
+
+/* styling for the side bar */
+
+
+.sidebar {
+  width: 300px;
+  background-color: rgba(247, 73, 2, 0.85);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* handle centering of gritty */
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
