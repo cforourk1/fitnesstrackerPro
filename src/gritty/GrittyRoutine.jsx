@@ -5,7 +5,8 @@ import "./gritty.css";
 import barbieGritty from "../grittyPics/barbieGritty.png";
 import grittyTurkey from "../grittyPics/grittyTurkey.png";
 import trueGrit from "../grittyPics/trueGrit.png";
-import flyersLogo from "../grittyPics/flyersLogo.png";
+import flyers from "../grittyPics/flyers.png";
+import gritHouse from "../grittyPics/gritHouse.png";
 
 export default function GrittyRoutine() {
   // get token authentication
@@ -49,10 +50,11 @@ return (
           </ul>
         </>
       )}
-      <img src={flyersLogo} className="flyersLogo" />
+      <img src={flyers} className="flyers" />
     </div>
     <div className="center">
       {activeSet && <img src={grittyImages[activeSet]} className="grittyPic" />}
+      <img src={gritHouse} className="gritHouse" />
     </div>
   </div>
 );

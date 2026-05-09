@@ -10,7 +10,7 @@ body {
 
 /* styling for flyers logo */
 
-.flyersLogo {
+.flyers {
     width: 300px;
     position: absolute;
     top: 1rem;
@@ -36,7 +36,7 @@ width: 900px;
 
 .sidebar {
   width: 300px;
-  background-color: rgba(247, 73, 2, 0.85);
+  background-color: rgb(247, 73, 2);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -50,4 +50,14 @@ width: 900px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+/*styling for lower right gritty */
+
+
+.gritHouse {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
 }
