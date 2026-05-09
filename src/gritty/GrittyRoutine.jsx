@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { getRoutines } from "../api/routines";
-
-
+import "./gritty.css";
+import barbieGritty from "../grittyPics/barbieGritty.png";
+import grittyTurkey from "../grittyPics/grittyTurkey.png";
+import trueGrit from "../grittyPics/trueGrit.png";
 
 export default function GrittyRoutine() {
   // get token authentication
@@ -13,32 +15,39 @@ export default function GrittyRoutine() {
   const [activeSet, setActiveSet] = useState(null);
   //error state
   const [error, setError] = useState(null);
+  //Gritty image objects
+  const grittyImages = {
+    661: barbieGritty,
+    663: grittyTurkey,
+    664: trueGrit,
+  };
   //render sync Routine and get the data from the api
   const syncRoutine = async () => {
-
     const data = await getRoutines();
-      const found = data.find((r) => r.id === 266);
+    const found = data.find((r) => r.id === 266);
+    console.log(found.sets);
     setRoutine(found);
   };
   useEffect(() => {
     syncRoutine();
   }, []);
   return (
-  <div>
-    <h1>Gritty's Workout</h1>
-    {Routine && (
-      <div>
-        <h2>{Routine.name}</h2>
-        <p>{Routine.goal}</p>
-        <ul>
-          {Routine.sets.map((set) => (
-            <button key={set.id}>
-              {set.name} x {set.count}
-            </button>
-          ))}
-        </ul>
-      </div>
-    )}
-  </div>
-);
+    <div>
+      <h1>Gritty's Workout</h1>
+      {Routine && (
+        <div>
+          <h2>{Routine.name}</h2>
+          <p>{Routine.goal}</p>
+          <ul>
+            {activeSet && <img src={grittyImages[activeSet]} />}
+            {Routine.sets.map((activity) => (
+              <button key={activity.id} onClick={() => setActiveSet(activity.activityId)}>
+                {activity.name} x {activity.count}
+              </button>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
 }
