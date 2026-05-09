@@ -6,7 +6,7 @@ import ActivitiesPage from "./activities/ActivitiesPage";
 import ActivityPage from "./activities/ActivityPage";
 import RoutinePage from "./routines/RoutinePage";
 import RoutinesPage from "./routines/RoutinesPage";
-import GrittyWorkout from "./gritty/GrittyRoutine.jsx";
+import GrittyRoutine from "./gritty/GrittyRoutine.jsx";
 import Error404 from "./Error404.jsx";
 
 /**
