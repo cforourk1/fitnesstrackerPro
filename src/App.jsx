@@ -6,7 +6,7 @@ import ActivitiesPage from "./activities/ActivitiesPage";
 import ActivityPage from "./activities/ActivityPage";
 import RoutinePage from "./routines/RoutinePage";
 import RoutinesPage from "./routines/RoutinesPage";
-import GrittyWorkout from "./gritty/GrittyWorkout";
+import GrittyWorkout from "./gritty/GrittyRoutine.jsx";
 import Error404 from "./Error404.jsx";
 
 /**
@@ -40,7 +40,7 @@ export default function App() {
 {/* show the routine page */}
         <Route path="routines" element={<RoutinesPage />} />
 {/* show the Gritty page */}
-        <Route path="gritty" element={<GrittyWorkout />} />
+        <Route path="gritty" element={<GrittyRoutine />} />
       </Route>
     </Routes>
   )

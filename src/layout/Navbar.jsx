@@ -10,7 +10,7 @@ export default function Navbar() {
       <nav>
         <Link to="/">Activities</Link>
         <Link to="routines">Routines</Link>
-        <Link to="gritty">Gritty Workout</Link>
+        <Link to="gritty">Gritty Routine</Link>
         {token ? (
           <a onClick={() => logout()}>Log out</a>
         ) : (
