@@ -5,6 +5,7 @@ import "./gritty.css";
 import barbieGritty from "../grittyPics/barbieGritty.png";
 import grittyTurkey from "../grittyPics/grittyTurkey.png";
 import trueGrit from "../grittyPics/trueGrit.png";
+import flyersLogo from "../grittyPics/flyersLogo.png";
 
 export default function GrittyRoutine() {
   // get token authentication
@@ -31,23 +32,27 @@ export default function GrittyRoutine() {
   useEffect(() => {
     syncRoutine();
   }, []);
-  return (
-    <div>
+return (
+  <div className="pageWrapper">
+    <div className="sidebar">
       <h1>Gritty's Workout</h1>
       {Routine && (
-        <div>
+        <>
           <h2>{Routine.name}</h2>
           <p>{Routine.goal}</p>
           <ul>
-            {activeSet && <img src={grittyImages[activeSet]} />}
             {Routine.sets.map((activity) => (
               <button key={activity.id} onClick={() => setActiveSet(activity.activityId)}>
                 {activity.name} x {activity.count}
               </button>
             ))}
           </ul>
-        </div>
+        </>
       )}
+      <img src={flyersLogo} className="flyersLogo" />
     </div>
-  );
-}
+    <div className="center">
+      {activeSet && <img src={grittyImages[activeSet]} className="grittyPic" />}
+    </div>
+  </div>
+);

@@ -1,8 +1,24 @@
 /* styling for the background image and main body */
 body {
-    background-image: url("/hockeyRink.jpeg");
+    background-image: url("../grittyPics/hockeyRink.jpeg");
     background-size: cover;
     background-position: center;
     position: relative;
     min-height: 100vh;
+}
+
+
+/* styling for flyers logo */
+
+.flyersLogo {
+    width: 300px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.grittyPic {
+width: 900px;
+
+
 }
