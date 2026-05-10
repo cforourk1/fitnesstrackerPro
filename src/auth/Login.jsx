@@ -23,7 +23,7 @@ export default function Login() {
   };
 
   return (
-    <>
+    <div className="routineBar">
       <h1>Log in to your account</h1>
       <form action={tryLogin}>
         <label>
@@ -38,6 +38,6 @@ export default function Login() {
         {error && <p role="alert">{error}</p>}
       </form>
       <Link to="/register">Need an account? Register here.</Link>
-    </>
+    </div>
   );
 }

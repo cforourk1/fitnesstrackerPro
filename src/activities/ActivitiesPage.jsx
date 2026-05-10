@@ -17,10 +17,10 @@ export default function ActivitiesPage() {
   }, []);
 
   return (
-    <>
+     <div className="routineBar">
       <h1>Activities</h1>
-      <ActivityList activities={activities} syncActivities={syncActivities} />
       <ActivityForm syncActivities={syncActivities} />
-    </>
+      <ActivityList activities={activities} syncActivities={syncActivities} />
+    </div>
   );
 }

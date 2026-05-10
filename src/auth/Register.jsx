@@ -25,7 +25,7 @@ export default function Register() {
   };
 
   return (
-    <>
+    <div className="routineBar">
       <h1>Register for an account</h1>
       <form action={tryRegister}>
         <label>
@@ -41,6 +41,6 @@ export default function Register() {
       </form>
       <Link to="login">Login</Link>
         Already have an account? Log in here.
-    </>
+    </div>
   );
 }

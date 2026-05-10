@@ -37,10 +37,10 @@ export default function RoutinePage() {
   return (
     <>
       {Routine && (
-        <div>
-          <h1>{Routine.name}</h1>
-          <p>{Routine.goal}</p>
-          <p>{Routine.creatorName}</p>
+        <div className="routineBar">
+          <h3>Routine Name: {Routine.name}</h3>
+          <p>Goal: {Routine.goal}</p>
+          <p>Creator: {Routine.creatorName}</p>
           <h2>Sets</h2>
           {Routine.sets.length === 0 ? (
             <p>No sets yet! Add one below.</p>

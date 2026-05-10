@@ -35,8 +35,8 @@ function ActivityListItem({ activity, syncActivities }) {
   };
 //added link to for the activity ID
   return (
-    <li>
-      <Link to={`/activities/${activity.id}`}>{activity.name}</Link>
-    </li>
+    <div>
+    <Link className="routineButton" to={`/activities/${activity.id}`}>{activity.name}</Link>
+    </div>
   );
 }

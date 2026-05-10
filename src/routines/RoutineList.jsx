@@ -35,8 +35,8 @@ function RoutineListItem({ Routine, syncRoutines }) {
   };
 //added link to for the Routine ID
   return (
-    <li>
-      <Link to={`/routines/${Routine.id}`}>{Routine.name}</Link>
-    </li>
+    <div>
+      <Link className="routineButton" to={`/routines/${Routine.id}`}>{Routine.name}</Link>
+      </div>
   );
 }

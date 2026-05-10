@@ -23,6 +23,13 @@ export default function GrittyRoutine() {
     663: grittyTurkey,
     664: trueGrit,
   };
+  //gritty animations object
+  const grittyAnimations = {
+    661: "grittyTwirl",
+    663: "grittyShake",
+    664: "grittyWreck",
+  };
+  
   //render sync Routine and get the data from the api
   const syncRoutine = async () => {
     const data = await getRoutines();
@@ -36,18 +43,15 @@ export default function GrittyRoutine() {
 return (
   <div className="pageWrapper">
     <div className="sidebar">
-      <h1>Gritty's Workout</h1>
       {Routine && (
         <>
-          <h2>{Routine.name}</h2>
-          <p>{Routine.goal}</p>
-          <ul>
+          <h3>{Routine.name}</h3>
+          <p>Goal: {Routine.goal}</p>
             {Routine.sets.map((activity) => (
               <button key={activity.id} onClick={() => setActiveSet(activity.activityId)}>
-                {activity.name} x {activity.count}
+                {activity.name}
               </button>
             ))}
-          </ul>
         </>
       )}
       <img src={flyers} className="flyers" />
